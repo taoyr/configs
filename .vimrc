@@ -147,7 +147,7 @@ map \ ,
 map H 0
 map L $
 map <Space> m`*``
-map <esc> :noh<cr>zz
+map <esc> :noh<cr>
 map j gjzz
 map k gkzz
 map n nzz
@@ -187,6 +187,8 @@ map <leader>g :cs find g <C-R>=expand("<cword>")<CR><CR>
 map <leader>h :Dash <C-R>=expand("<cword>")<CR><CR>
 map <leader>i :cs find i ^<C-R>=expand("<cword>")<CR>$<CR>
 map <leader>j <Plug>CtrlSFPrompt
+map <leader>k :Errors<cr>
+map <leader>l :lclose<cr>
 let g:multi_cursor_start_key='g<C-m>'
 let g:multi_cursor_start_word_key='<C-m>'
 map <leader>n :set nopaste<cr>
@@ -246,7 +248,7 @@ let g:NERDSpaceDelims=1
 
 let g:syntastic_enable_signs = 0
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
+let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
