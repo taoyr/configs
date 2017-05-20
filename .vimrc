@@ -118,12 +118,16 @@ filetype plugin indent on
 set cscopequickfix=s-,c-,d-,i-,t-,e-
 
 function! CSRESET()
-	!cs
-	cs reset
     if filereadable("cscope.out")
-        cs add cscope.out
-    elseif $CSCOPE_DB != ""
-        cs add $CSCOPE_DB
+        !cs
+        cs reset
+    else
+        !cs
+        if filereadable("cscope.out")
+            cs add cscope.out
+        elseif $CSCOPE_DB != ""
+            cs add $CSCOPE_DB
+        endif
     endif
 endfunction
 
@@ -147,7 +151,7 @@ map \ ,
 map H 0
 map L $
 map <Space> m`*``
-map <esc> :noh<cr>
+map <esc> :noh<cr>:w<cr>
 map j gjzz
 map k gkzz
 map n nzz
@@ -164,7 +168,7 @@ map <c-k> <c-w>kzz
 map <c-l> <c-w>lzz
 map <c-o> <c-o>zz
 map <c-u> <c-u>zz
-let g:EasyMotion_leader_key='<c-f>'
+let g:EasyMotion_leader_key='f'
 nmap <c-n> :cn<CR>zz
 nmap <c-p> :cp<CR>zz
 
@@ -256,3 +260,5 @@ let g:vim_markdown_frontmatter=1
 let g:vim_markdown_folding_disabled = 1
 
 let g:ycm_show_diagnostics_ui = 0
+
+" highlight SyntasticErrorSign guifg=white guibg=red
