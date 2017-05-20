@@ -1,0 +1,10 @@
+[user]
+	email = yongrentao@gmail.com
+	name = taoyongren
+
+[alias]
+    co = checkout
+    ci = commit
+    br = branch
+    st = status
+    df = diff
