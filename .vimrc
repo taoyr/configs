@@ -70,7 +70,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-surround'
 Bundle 'airblade/vim-gitgutter'
-Bundle 'terryma/vim-multiple-cursors'
+" Bundle 'terryma/vim-multiple-cursors'
 Bundle 'sjl/gundo.vim'
 Bundle 'dyng/ctrlsf.vim'
 Bundle 'Tagbar'
@@ -189,8 +189,8 @@ map <leader>i :cs find i ^<C-R>=expand("<cword>")<CR>$<CR>
 map <leader>j <Plug>CtrlSFPrompt
 map <leader>k :Errors<cr>
 map <leader>l :lclose<cr>
-let g:multi_cursor_start_key='g<C-m>'
-let g:multi_cursor_start_word_key='<C-m>'
+" let g:multi_cursor_start_key='g<C-m>'
+" let g:multi_cursor_start_word_key='<C-m>'
 map <leader>n :set nopaste<cr>
 map <leader>p :set paste<cr>
 map <leader>r :call CSRESET()<CR><cr><cr>
