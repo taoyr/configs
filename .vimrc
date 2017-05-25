@@ -150,17 +150,22 @@ let mapleader=","
 map \ ,
 map H 0
 map L $
-map <Space> m`*``
-map <esc> :noh<cr>:w<cr>
+" map <Space> m`#``
+map <esc> :noh<cr>
 map j gjzz
 map k gkzz
 map n nzz
+xnoremap p pgvy
 map <s-n> <s-n>zz
-map * *zz
-map # #zz
+map * *``zz
+map # #``zz
 map <c-b> <c-b>zz
 map <c-d> <c-d>zz
 map <c-f> <c-f>zz
+imap <C-h> <Left>
+imap <C-j> <Down>
+imap <C-k> <Up>
+imap <C-l> <Right>
 map <c-h> <c-w>hzz
 map <c-i> <c-i>zz
 map <c-j> <c-w>jzz
@@ -168,7 +173,7 @@ map <c-k> <c-w>kzz
 map <c-l> <c-w>lzz
 map <c-o> <c-o>zz
 map <c-u> <c-u>zz
-let g:EasyMotion_leader_key='f'
+let g:EasyMotion_leader_key='<Space>'
 nmap <c-n> :cn<CR>zz
 nmap <c-p> :cp<CR>zz
 
@@ -210,6 +215,9 @@ map <leader><leader>l :TlistToggle<CR>
 map <leader><leader>s :SrcExplToggle<CR><CR>
 map <leader><leader>t :TagbarToggle<CR>
 map <leader><leader>w :cw<CR>
+
+map <silent> <leader>ss :source ~/.vimrc<cr>
+map <silent> <leader>ee :e ~/.vimrc<cr>
 
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
