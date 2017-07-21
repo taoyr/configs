@@ -159,6 +159,7 @@ xnoremap p pgvy
 map <s-n> <s-n>zz
 map * *``zz
 map # #``zz
+map gd gd``zz
 map <c-b> <c-b>zz
 map <c-d> <c-d>zz
 map <c-f> <c-f>zz
